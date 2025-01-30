@@ -13,6 +13,7 @@ class Products(models.Model):
     image=models.ImageField(upload_to='pictures/')
     date_added= models.DateTimeField(default=timezone.now)
     type= models.CharField(max_length=6,choices=product_type)
+    description=models.TextField(default='')
 
     def __str__(self):
         return self.name
